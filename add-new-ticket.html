@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRB Team</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <div class="logo-menu">
+            <h2 class="logo">VNAT TED HDMX TRB</h2> 
+            <i class='bx bx-menu toggle-btn'></i>
+        </div>
+
+        <ul class="list">
+            <li class="list-item">
+                <a href="index.html">
+                    <i class='bx bx-home-alt' ></i>
+                    <span class="link-name" style="--i:1;">Home
+                    </span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="documents.html">
+                    <i class='bx bx-file' ></i>
+                    <span class="link-name" style="--i:2;">Documents
+                    </span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="" class="menu-toggle submit-ticket-toggle">
+                    <i class='bx bx-paper-plane' ></i>
+                    <span class="link-name" style="--i:3;">Submit Ticket
+                    </span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="add-new-ticket.html" class="sub-item">Add new ticket</a></li>
+                    <li><a href="all-tickets.html" class="sub-item">All tickets</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+<div class="main-content">
+<section class="ticket" id="ticket">
+    <div class="ticket-title">
+        <h1>Add new ticket</h1>
+    </div>
+    <form action="https://sheetdb.io/api/v1/kth3gkjb849z6" method="POST" id="form" action="/">
+        <div class="input-group">
+            <div class="input-box">
+                <input id="title" name="data[title]" type="text" placeholder="Title" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input id="description" name="data[description]" type="text"
+                placeholder="Description" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input id="created-date" name="data[created-date]" type="date" required>
+                <div class="error"></div>
+            </div>
+            <div class="dropdown-list">
+                <p>Category</p>
+                <div class="container">
+                    <select name="data[category]" id="category" required>
+                        <option value="">Select an option</option>
+                        <option value="Lot On Hold">Lot On Hold</option>
+                        <option value="Line Down">Line Down</option>
+                        <option value="CIP">CIP</option>
+                        <option value="SW Debug">SW Debug</option>
+                        <option value="SPOF">SPOF</option>
+                        <option value="Automation Set-up">Automation Set-up</option>
+                        <option value="Handler Down">Handler Down</option>
+                        <option value="NPI">NPI</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <p>Critical level</p>
+                <div class="container">
+                    <select name="data[critical-level]" id="critical-level" required>
+                        <option value="">Select an option</option>
+                        <option value="1 - Safety/ SRB excursion">1 - Safety/ SRB excursion</option>
+                        <option value="2 - Potential XRB level">2 - Potential XRB level</option>
+                        <option value="3 - Potential Cap/Quality/DI induced">3 - Potential Cap/Quality/DI induced</option>
+                        <option value="4 - Sighting problems">Sighting problems</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <p>Submitter</p>
+                <div class="container">
+                    <select name="data[submitter]" id="submitter" required>
+                        <option value="Select an option">Select an option</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <p>Supporter</p> 
+                <main class="container">
+                    <select name="data[supporter]" id="supporter" required>
+                        <option value="Select an option">Select an option</option>
+                    </select>
+                    <div class="error"></div>
+                </main>
+                <p>Status</p>
+                <div class="container">
+                    <select name="data[status]" id="status" required>
+                        <option value="">Select an option</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Closed">Closed</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Waiting on Customer">Waiting on Customer</option>
+                        <option value="Wait logs or more detail">Wait logs or more details</option>
+                        <option value="Following up Azure/TFS ticket">Following up Azure/TFS ticket</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <p>Tpt</p>
+                <div class="container">
+                    <select name="data[tpt]" id="tpt" required>
+                        <option value="">Select an option</option>
+                        <option value="7 working days">7 working days</option>
+                        <option value="2 working days">2 working days</option>
+                        <option value="To be determined">To be determined</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <p>Platform</p>
+                <div class="container">
+                    <select name="data[platform]" id="platform" required>
+                        <option value="">Select an option</option>
+                        <option value="HDMx 3.0">HDMx 3.0</option>
+                        <option value="HDMx 2.0">HDMx 2.0</option>
+                        <option value="SST">SST</option>
+                        <option value="None">None</option>
+                        <option value="Internal Dev">Internal Dev</option>
+                        <option value="All">All</option>
+                        <option value="HDBI">HDBI</option>
+                    </select> 
+                    <div class="error"></div>
+                </div>
+            </div>
+            <div class="input-group2">
+                <textarea name="data[bug-description]" id="" cols="30"
+                rows="10" placeholder="Bug Description"></textarea>
+                <input type="submit" value="Submit Ticket" class="btn">
+            </div>
+        </div>
+    </form>
+</section>
+</div>
+    <script src="script.js"></script>
+    <script src="swiper.js"></script>
+</body>
+</html>
+
